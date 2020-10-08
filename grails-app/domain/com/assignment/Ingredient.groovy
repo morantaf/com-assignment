@@ -1,10 +1,14 @@
 package com.assignment
 
+import enums.AmountType
+
 class Ingredient {
 
-    String name
+    String name // Name of the ingredient
+    AmountType amount  // Amount required
 
-    static hasMany = [recipes : Recipe]
+
+    static belongsTo = [Recipe]
 
     static constraints = {
     }
