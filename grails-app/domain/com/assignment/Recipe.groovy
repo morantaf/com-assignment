@@ -6,6 +6,7 @@ class Recipe {
     String description // Description of the recipe
     int timeInMinutes // Time to cook
     static ArrayList<String> meal = ["Breakfast","Lunch","Dinner"]
+    ArrayList<Ingredient> ingredients
 
     static constraints = {
     }
