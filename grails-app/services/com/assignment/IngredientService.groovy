@@ -6,14 +6,8 @@ import grails.web.RequestParameter
 @Transactional
 class IngredientService {
 
-    def get(id) {
-        Ingredient.get(id)
-    }
 
-    def list(){
-        Ingredient.list()
-    }
-
+    //Logic to save an ingredient
     def save(ingredient) {
         ingredient.save()
     }
