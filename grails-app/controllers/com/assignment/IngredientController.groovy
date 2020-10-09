@@ -1,7 +1,5 @@
 package com.assignment
 
-import grails.web.RequestParameter
-
 class IngredientController {
 
     IngredientService ingredientService
