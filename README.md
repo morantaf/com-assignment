@@ -7,10 +7,15 @@ It is a recipe application.
 A recipe should have :
 
 •Name
+
 •Description
+
 •List of ingredients
+
   o An ingredient has a name and an amount
+  
 •Time required to cook
+
 •Type of meal: breakfast, lunch or dinner
 
 # User Stories
