@@ -12,7 +12,7 @@ class Recipe {
 
     static hasMany = [ingredients : Ingredient]
 
-    // Add constraint for the timeInMinutes so that it can't go negative
+    // Add constraint for the timeInMinutes so that it can't go negative and to prevent the use of incorrect characters for the name
     static constraints = {
         name(matches: "[a-zA-Z\\s]+")
         description(matches: "[a-zA-Z\\s]+")

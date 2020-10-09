@@ -12,7 +12,7 @@ class Ingredient {
 
     static belongsTo = [Recipe]
 
-    // Constraint to prevent the use of negative input for the time
+    // Constraint to prevent the use of negative input for the time and the use of incorrect characters for the name
     static constraints = {
         name(matches: "[a-zA-Z\\s]+")
         amount(min:0)
