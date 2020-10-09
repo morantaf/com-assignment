@@ -12,7 +12,7 @@ A recipe should have :
 
 •List of ingredients
 
-  o An ingredient has a name and an amount
+     o An ingredient has a name and an amount
   
 •Time required to cook
 
