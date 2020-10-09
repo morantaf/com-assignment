@@ -1,6 +1,7 @@
 package com.assignment
 
 import grails.gorm.transactions.Transactional
+import grails.web.RequestParameter
 
 @Transactional
 class IngredientService {
@@ -9,15 +10,12 @@ class IngredientService {
         Ingredient.get(id)
     }
 
+    def list(){
+        Ingredient.list()
+    }
+
     def save(ingredient) {
         ingredient.save()
     }
 
-    def list() {
-        Recipe.list()
-    }
-
-    def serviceMethod() {
-
-    }
 }
