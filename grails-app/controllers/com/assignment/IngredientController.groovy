@@ -1,38 +1,22 @@
 package com.assignment
 
+import grails.web.RequestParameter
+
 class IngredientController {
 
     IngredientService ingredientService
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save:"POST"]
 
-
-    def show(Long id) {
-        respond ingredientService.get(id)
-    }
-
+    // Action to display a form to create an instance of Ingredient
     def create() {
         respond new Ingredient(params)
-    /*def recipe = Recipe.findById(params.id)
-        if(recipe) {
-            def ingredient = new Ingredient(params)
-            recipe.addToIngredients(ingredient)
-        }
-        redirect(controller:'recipe' , action: 'create', id: params.id)*/
     }
 
-    def addIngredient() {
-        def recipe = Recipe.findById(params.id)
-        if(recipe) {
-            def ingredient = new Ingredient(params)
-            recipe.addToIngredients(ingredient)
-        }
-        redirect(controller:'recipe' , action: 'create', id: params.id)
+    // Action to save a created ingredient
+    def save(Ingredient ingredient) {
+        ingredientService.save(ingredient)
+        redirect(controller:"recipe", action:"index", method:"GET")
     }
-
-    def edit(Long id) {
-        respond ingredientService.get(id)
-    }
-
 
 }
