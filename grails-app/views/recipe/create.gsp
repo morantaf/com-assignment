@@ -16,15 +16,6 @@
                     <f:field bean="recipe" property="name" />
                     <f:field bean="recipe" property="description" />
                     <f:field bean="recipe" property="timeInMinutes" />
-                    <f:field bean="recipe" property="ingredients" >
-                        <g:form controller="ingredient" action ="addIngredient" id="${params.id}">
-                            <fieldset class="form">
-                                <f:field bean="ingredient" property="name"  />
-                                <f:field bean="ingredient" property="amount" />
-                            </fieldset>
-                            <g:submitButton name="add" value="add"/>
-                        </g:form>
-                    </f:field>
 
                     <f:field bean="recipe" property="meal">
                         <g:select name="meal"
@@ -36,6 +27,9 @@
                     <g:submitButton name="create" class="save" value="create" />
                 </fieldset>
             </g:form>
+
+        </div>
+        <div id="create-ingredient" class="content scaffold-create" role="main">
         </div>
     </body>
 </html>
