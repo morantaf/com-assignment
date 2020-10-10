@@ -1,6 +1,5 @@
 package com.assignment
 
-import enums.AmountType
 import grails.gorm.transactions.Transactional
 
 @Transactional
@@ -23,7 +22,6 @@ class IngredientService {
         if(recipe) {
             def ingredient = new Ingredient(name: name, amount: amount, type : type)
             recipe.addToIngredients(ingredient).save()
-            return ingredient
         }
     }
 
