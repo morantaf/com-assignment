@@ -4,7 +4,7 @@ class IngredientController {
 
     IngredientService ingredientService
 
-    static allowedMethods = [save:"POST", edit:"", addIngredient: "POST"]
+    static allowedMethods = [save:"POST", edit:["POST", "GET"], addIngredient: "POST"]
 
     // Action to display a form to create an instance of Ingredient
     def create() {
@@ -31,9 +31,6 @@ class IngredientController {
     def addIngredient(String id, String name, int amount, String type) {
         ingredientService.createIngredient(id, name, amount, type)
         redirect(controller:"recipe", action:"update", id:params.id)
-
     }
-
-
 
 }
