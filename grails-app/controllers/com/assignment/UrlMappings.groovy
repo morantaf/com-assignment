@@ -9,6 +9,8 @@ class UrlMappings {
             }
         }
 
+        "/api/recipe/$action?" (controller: "recipeRest")
+
         "/"(view:"/index")
         "500"(view:'/error')
         "404"(view:'/notFound')
